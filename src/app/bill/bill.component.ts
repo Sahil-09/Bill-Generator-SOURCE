@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { billservice } from '../bill.service';
-import { jsPDF } from "jspdf";
 import * as h2p from 'html2pdf.js'
 
 @Component({
