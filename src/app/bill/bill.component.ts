@@ -30,7 +30,7 @@ export class BillComponent implements OnInit {
       unit:1
     }]
   };
-  paymentlink:string="https://www.instamojo.com/@Kraddydzn/ef5fc637431143ecbaf06095e2d3a50c";
+  paymentlink:string="";
   qrcode:string
   total=0
   
@@ -42,10 +42,8 @@ export class BillComponent implements OnInit {
       this.total+=a.price*a.unit
       console.log(this.total)
     }
-    let payload={
-      amount:this.total,
-      purpose:"GFX"
-    }
+
+    
 
     
 
@@ -58,6 +56,11 @@ export class BillComponent implements OnInit {
 
     this.http.post<{access_token:string}>("https://api.instamojo.com/oauth2/token/",tdata).subscribe(res=>{
      console.log(res)
+     console.log(this.total)
+     let payload={
+      amount:this.total,
+      purpose:"GFX"
+    }
       this.http.post("https://api.instamojo.com/v2/payment_requests/",payload,{
         headers:new HttpHeaders({
           'Authorization': 'Bearer '+res.access_token})
