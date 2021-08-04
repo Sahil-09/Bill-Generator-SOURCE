@@ -1,0 +1,69 @@
+.control{
+    background: none;
+    border:none;
+    border-bottom: 1px solid rgb(0, 89, 255);
+    padding: 0.5vw;
+    font-size: 20px;
+    width:100%;
+    font-family:'DM Sans', sans-serif;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+.form p{
+    display: flex;
+    justify-content:center;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-family: 'Libre Barcode 39 Extended Text', cursive;
+}
+
+button{
+    background:rgb(0, 119, 255);
+    border:none;
+    cursor: pointer;
+    padding:0.50vw;
+    color:white;
+    font-size: 16px;
+    font-family:'DM Sans', sans-serif;
+    margin: 2% 0%;
+    border-radius: 4.5px;
+}
+
+.add{
+    background:grey;
+    width: 100%;
+}
+
+.group{
+    display: flex;
+    gap:1vw
+}
+
+.rem{
+    background-color: red;
+    border-radius: 2vw;
+    padding: 0.5vw 0.78vw;
+    font-weight: 900;
+}
+
+.submit{
+    font-size: 24px;
+    padding: 0.4vw 1vw;
+}
+
+.reset{
+    border: 1px solid rgb(190, 190, 190);
+    background:rgb(233, 233, 233);
+    color:rgb(66, 66, 66);
+}

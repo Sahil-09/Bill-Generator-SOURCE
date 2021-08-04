@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="form">
+    <p>Kraddy bill generator!</p>
+    <form [formGroup]="Billform" (ngSubmit)="submit()">
+        <div class="group">
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter customer name"
+              class="control"
+              formControlName="name"
+            />
+            <input
+              type="date"
+              name="date"
+              formControlName="date"
+              class="control"
+            />
+        </div>
+
+
+      <div formArrayName="items">
+        
+        <div
+          *ngFor="let item of Billform.get('items')['controls']; let i = index"
+        >
+          <div [formGroupName]="i" class=group>
+            <input
+              type="text"
+              name="item"
+              placeholder="Enter Item"
+              formControlName="item"
+              class="control"
+            />
+            <input
+              type="number"
+              name="unit"
+              placeholder="Enter unit"
+              formControlName="unit"
+              class="control"
+            />
+            <input
+              type="number"
+              name="price"
+              placeholder="Enter price"
+              formControlName="price"
+              class="control"
+            />
+            <button (click)="remove(i)" class="rem">X</button>
+          </div>
+        </div>
+        <button type="button" (click)="additem()" class="add">Add item +</button>
+      </div>
+
+    <div class="group">
+        <button type="submit" class="submit">Submit</button>
+        <button type="button" class="submit reset" (click)="reset()">Reset</button>
+    </div>
+    </form>
+  </div>
+</div>

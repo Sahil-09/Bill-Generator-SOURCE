@@ -1,0 +1,269 @@
+.main-container{
+    height:100vh;
+    width:100%;
+    display:flex;
+    background-color: #F9F9F9;
+    justify-content: center;
+    align-items: center;
+}
+
+.qrimg{
+    width: 124px;
+    height: 124px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    margin-bottom:4px ;
+}
+
+.qrimg img{
+    width:6.5vw;
+    object-position: center;
+    transform: scale(1.26);
+}
+
+.main-bill{
+  width:595px;
+  height:842px;
+  overflow:hidden;
+  background-color: white;
+  filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.034)); 
+}
+
+.container{
+    padding: 0px 24px;
+    padding-top: 40px;
+}
+
+.cmpny,.header{
+    display: flex;
+    gap:8px;
+}
+
+.header{
+    justify-content:space-between;
+}
+
+.inv{
+    font-weight: 600;
+    font-size: 34px;
+}
+
+.name{
+    font-weight: 600;
+}
+.location{
+    font-size: 12px;
+}
+.inv-head{
+    color:#8000FF;
+}
+.inv-detail{
+    display: flex;
+    margin-top: 40px;
+    justify-content: flex-end;
+    font-size: 12px;
+    font-weight: 600;
+    gap: 40px;
+}
+
+.inv-container::after{
+    display: flex;
+    justify-content: center;
+    content:'';
+    margin-top: 20px;
+    padding: 0 4px;
+    width: 100%;
+    height: 1px;
+    background-color:rgb(231, 231, 231)
+}
+
+.bill-row{
+    display: grid;
+    grid-template-columns: 15% 35% 20% 15% 15%;
+    margin-top: 20px;
+    justify-items: center;
+    color:#8000FF;
+    font-size: 18px;
+    font-weight: 600;
+}
+.t{
+    color:black;
+    margin-top: 10px;
+}
+
+.price-container{
+    height: 250px;  
+}
+
+.mid-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.subtotal,.tax,.sum{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.detail-p{
+    font-weight: 500;
+    font-size: 11px;
+}
+
+.tnc-container{display: flex;
+    flex-direction: column;
+    align-items: flex-end;}
+
+.total{
+display: flex;
+    flex-direction: column;
+    width: 62%;
+    gap:4px
+}
+
+.tnc{
+width: 78%;
+margin-top: 60px;
+}
+
+.pay-scan{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tnc .prp{
+    display: flex;
+    justify-content:flex-end;
+}
+
+.prp{
+    font-weight: 600;
+    color:#8000FF; 
+    margin-bottom:8px;
+}
+
+.sub{
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.divide{
+    display:flex;
+    content:'';
+    width: 100%;
+    height:1px;
+    margin-top:4px;
+    margin-bottom: 4px;
+    background-color:#8000FF
+}
+
+.txt,.money{
+    color:rgb(77, 77, 77);
+    font-weight: 600;
+}
+
+.te{
+    color:black
+}
+
+.money {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.divide1{
+    display: flex;
+    justify-content: center;
+    content:'';
+    margin-top: 20px;
+    padding: 0 4px;
+    width: 100%;
+    height: 1px;
+    background-color:rgb(231, 231, 231)
+}
+
+.trust{
+    display: flex;
+    justify-content:space-between
+}
+
+.pay-logo p{
+    font-size: 10px;
+    color:rgb(58, 58, 58)
+}
+
+.h-div{
+    display: flex;
+    justify-content: center;
+    content:'';
+    width: 1px;
+    margin-top:4px;
+    height: 10px;
+    background-color:rgb(107, 107, 107)
+}
+
+.logo-img img{
+    margin-right: 8px;
+}
+
+.paypal{
+    display: flex;
+    gap: 4px;
+}
+.paypal p{
+    margin: 0px;
+    margin-top: 2px;
+}
+
+.payment-link{
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.sign{
+    display:flex;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.sign p,.footer p{
+    margin: 0px;
+}
+
+.footer{
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    width:100%;
+    margin-top:26px;
+    color: white;
+    font-size: 10px;
+    padding:8px;
+    justify-content:center;
+    background-color:#8000FF
+}
+
+.print-btn{
+    display: flex;
+    position: absolute;
+    bottom: 4%;
+    right:4%;
+    background: rgb(0, 153, 255);
+    border: none;
+    padding: 8px 16px;
+    color:white;
+    font-size:19px;
+    border-radius: 0.3vw;
+}

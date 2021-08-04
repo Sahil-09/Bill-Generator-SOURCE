@@ -1,0 +1,140 @@
+<!-- <div>
+    <h1>{{invoicedata.name}}</h1>
+    <h1>{{invoicedata.date}}</h1>
+    <div *ngFor="let item of invoicedata.items">
+        <p>{{item.item}}</p>
+        <p>{{item.unit}}</p>
+        <p>{{item.price}}</p>
+        <p>{{item.unit * item.price}}</p>
+    </div>
+     <p>Total={{total}}</p>
+     <a [href]="paymentlink" *ngIf="paymentlink">Payment-link</a> 
+     <p>{{paymentlink}}</p>
+</div> -->
+
+
+<div class="main-container">
+    <div class="main-bill" id="main-bill">
+    
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <div class="container">
+        <div class="header">
+            <div class="cmpny">
+                <img src="../../assets/Kraddy logo black 1.png" alt="">
+                <div class="detail">
+                    <div class="name">KRADDY</div>
+                    <div class="location">MUMBAI, MAHARASHTRA <br>INDIA</div>
+                </div>
+            </div>
+                <div class="inv">
+                    INVOICE
+                </div>
+            
+        </div>
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <div class="inv-container">
+        <div class="inv-detail">
+
+            <div class="detail">
+                <div class="inv-head">INVOICE TO:</div>
+                <div class="inv-sub">{{invoicedata.name}}</div>
+            </div>
+
+            <div class="detail">
+                <div class="inv-head">INVOICE NO:</div>
+                <div class="inv-sub">KRDY{{invoiceno}}</div>
+            </div>
+
+            <div class="detail">
+                <div class="inv-head">INVOICE DATE:</div>
+                <div class="inv-sub">{{invoicedata.date}}</div>
+            </div>
+        </div>
+        </div>
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div class="price-container">        
+    <div class="bill-row">
+            <div class="bill-head">NO.</div>
+            <div class="bill-head">Item Description</div>
+            <div class="bill-head">Rate</div>
+            <div class="bill-head">QTY</div>
+            <div class="bill-head">Price</div>
+        </div>
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+        <div class="bill-row t" *ngFor="let item of invoicedata.items;let i = index">
+            <div class="sr">{{i+1}}</div>
+            <div class="item">{{item.item}}</div>
+            <div class="rate">{{item.price}}</div>
+            <div class="qty">{{item.unit}}</div>
+            <div class="price">{{item.price * item.unit}}</div>
+        </div>
+    </div>
+ <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////// -->       
+        <div class="mid-bottom">
+            <div class="pay-scan">
+                <div class="prp">Payment method</div>
+                <div class="qrimg">
+                    <img [src]="qrcode" alt="upiscan">
+                </div>
+                <div class="sub">SCAN TO PAY</div>
+            </div>
+            <div class="tnc-container">
+                <div class="total">
+                    <div class="subtotal">
+                        <div class="txt">Subtotal</div>
+                        <div class="money">{{total}}</div>
+                    </div>
+                    <div class="tax">
+                        <div class="txt">TAX</div>
+                        <div class="money">₹0</div>
+                    </div>
+                    <div class="divide"></div>
+                    <div class="sum">
+                        <div class="txt te">Total</div>
+                        <div class="money te">{{total}}</div>
+                    </div>
+                </div>
+                <div class="tnc">
+                    <div class="prp">Terms and conditions</div>
+                    <div class="detail-p">
+                        If order is finalise and all payment is settle. Order will CLOSED
+                        and any changes for the same order, charges will be applied.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divide1"></div>
+        <div class="trust">
+            <div class="pay-logo">
+                <p><i>*Supported payment</i> </p>
+                <div class="logo-img">
+                    <img src="../../assets/Visa_Inc._logo 1.png" alt="visa">
+                    <img src="../../assets/1200px-RuPay 1.png" alt="rupay">
+                    <img src="../../assets/paytm-226448 1.png" alt="paytm">
+                    <img src="../../assets/1200px-UPI-Logo-vector 1.png" alt="upi">
+                    <img src="../../assets/Google_Pay_Logo_(2020) 1.png" alt="gpay">
+                </div>
+                <div class="paypal">
+                    <div class="paypal-img"><img src="../../assets/paypal-784404_1280 1.png" alt="paypal"></div>
+                    <div class="h-div"></div>
+                    <p>Convinent fee applied on payment via paypal</p>
+                </div>
+                <div class="payment-link">
+                    <a [href]="paymentlink" *ngIf="paymentlink" target="blank">Paymentlink</a> 
+                </div>
+            </div>
+            <div class="sign">
+                <p>For KRADDY,</p>
+                <div><img src="../../assets/Sign autho 1.png" alt="signature"></div>
+                <p>AUTHORIZED SIGNATORY</p>
+            </div>
+        </div>
+    
+    </div>
+    <div class="footer">
+        <p>© 2021 SAHIL. ALL RIGHT RESERVED</p>
+    </div>
+</div>
+<button class="print-btn" (click)="print()">PRINT</button>
+</div>
