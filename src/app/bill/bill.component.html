@@ -65,9 +65,9 @@
         <div class="bill-row t" *ngFor="let item of invoicedata.items;let i = index">
             <div class="sr">{{i+1}}</div>
             <div class="item">{{item.item}}</div>
-            <div class="rate">{{item.price}}</div>
-            <div class="qty">{{item.unit}}</div>
-            <div class="price">{{item.price * item.unit}}</div>
+            <div class="rate">{{item.amount}}</div>
+            <div class="qty">{{item.quantity}}</div>
+            <div class="price">{{item.amount * item.quantity}}</div>
         </div>
     </div>
  <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////// -->       
@@ -121,7 +121,8 @@
                     <p>Convinent fee applied on payment via paypal</p>
                 </div>
                 <div class="payment-link">
-                    <a [href]="paymentlink" *ngIf="paymentlink" target="blank">Paymentlink</a> 
+                    <a [href]="paymentlink" *ngIf="paymentlink" target="blank">Paymentlink</a> &nbsp; &nbsp;
+                    <a [href]="razrpay" *ngIf="razrpay" target="blank">Razor Paymentlink</a> 
                 </div>
             </div>
             <div class="sign">
@@ -130,11 +131,11 @@
                 <p>AUTHORIZED SIGNATORY</p>
             </div>
         </div>
-    
+        
     </div>
     <div class="footer">
         <p>© 2021 SAHIL. ALL RIGHT RESERVED</p>
     </div>
 </div>
-<button class="print-btn" (click)="print()">PRINT</button>
+<a (click)="print()" id="print" class="print-btn">Print</a>
 </div>

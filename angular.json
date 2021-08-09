@@ -15,6 +15,7 @@
           "options": {
             "outputPath": "dist/invoice-app",
             "index": "src/index.html",
+            "allowedCommonJsDependencies": ["html2pdf.js"],
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
@@ -62,7 +63,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "invoice-app:build",
-            "proxyConfig": "proxy.conf.json"
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {

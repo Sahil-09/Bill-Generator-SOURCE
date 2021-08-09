@@ -1,0 +1,20 @@
+{
+    "/v2/*": {
+      "target": "https://api.instamojo.com",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    },
+    "/oauth2/token/*": {
+      "target": "https://api.instamojo.com",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    },
+    "/v1/*":{
+      "target": "https://api.razorpay.com",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+}

@@ -34,8 +34,8 @@ export class FillDetailComponent implements OnInit {
   additem(){
     let ctrl=new FormGroup({
       item:new FormControl(null),
-      unit:new FormControl(1),
-      price:new FormControl(null)
+      quantity:new FormControl(1),
+      amount:new FormControl(null)
     })
     let form=this.Billform.get('items') as FormArray;
     form.push(ctrl)
@@ -47,6 +47,7 @@ export class FillDetailComponent implements OnInit {
   }
 
   submit(){
+    console.log(this.Billform.value)
     this.billser.bill(this.Billform.value)
     this.router.navigate(['bill'])
   }

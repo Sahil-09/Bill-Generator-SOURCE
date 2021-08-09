@@ -28,7 +28,7 @@
           <div [formGroupName]="i" class=group>
             <input
               type="text"
-              name="item"
+              name="name"
               placeholder="Enter Item"
               formControlName="item"
               class="control"
@@ -37,14 +37,14 @@
               type="number"
               name="unit"
               placeholder="Enter unit"
-              formControlName="unit"
+              formControlName="quantity"
               class="control"
             />
             <input
               type="number"
               name="price"
               placeholder="Enter price"
-              formControlName="price"
+              formControlName="amount"
               class="control"
             />
             <button (click)="remove(i)" class="rem">X</button>
