@@ -1,0 +1,14 @@
+{
+    "/v2": {
+      "target": "https://api.instamojo.com",
+      "secure": false
+    },
+    "/oauth2":{
+      "target": "https://api.instamojo.com",
+      "secure": false
+    },
+    "/upi-qr-code-api":{
+      "target": "https://www.upiqrcode.com",
+      "secure": false
+    }
+}

@@ -53,7 +53,12 @@ export class BillComponent implements OnInit {
     tdata.append("client_secret","RBpWQ9mKiLDyU37NkSaH4beGFTd2LoWU9T3bIb04vaw7BXtLMHI5YVl6IeumUi86ac8QyEr0hTbbI1i1YxBgnUe8IhU2HIALklfiVhPgHYTQBXQjZpjx0yuTJ7KXzfTk")
   
 
-    this.http.post<{access_token:string}>("https://api.instamojo.com/oauth2/token/",tdata).subscribe(res=>{
+    this.http.post<{access_token:string}>("https://api.instamojo.com/oauth2/token/",tdata,{
+      headers:new HttpHeaders({
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
+      })
+    }).subscribe(res=>{
      console.log(res)
      console.log(this.total)
      let payload={

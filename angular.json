@@ -61,7 +61,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "invoice-app:build"
+            "browserTarget": "invoice-app:build",
+            "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {
